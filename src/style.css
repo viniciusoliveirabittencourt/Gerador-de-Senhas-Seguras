@@ -1,4 +1,8 @@
 /* src/style.css */
+.none {
+  display: none;
+}
+
 body {
   background-color: #505050;
   color: white;
@@ -44,4 +48,13 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin: 10px
+}
+
+button:hover {
+  background-color: #7c188a;
+  color: rgb(192, 192, 192);
+}
+
+h3 {
+  color: #f7b1ff;
 }

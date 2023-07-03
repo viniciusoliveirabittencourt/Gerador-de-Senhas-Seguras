@@ -7,14 +7,10 @@ const displayPasswordEl = document.querySelector('h2');
 const copyTranferenceArea = document.querySelector('h3');
 const timeToDisapearTranferenceArea = 3000;
 
-const removeClassNone = () => {
-  copyTranferenceArea.classList.add('none');
-};
-
 passwordBtnEl.addEventListener('click', () => {
   const randomPassword = nanoid();
   displayPasswordEl.innerHTML = randomPassword;
   copy(randomPassword);
   copyTranferenceArea.classList.remove('none');
-  setTimeout(removeClassNone, timeToDisapearTranferenceArea);
+  setTimeout(() => copyTranferenceArea.classList.add('none'), timeToDisapearTranferenceArea);
 });
